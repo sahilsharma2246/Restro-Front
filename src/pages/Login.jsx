@@ -1,7 +1,6 @@
-import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 export default function Login(){
- const {login}=useContext(AuthContext);
+ const {login}=useAuth();
  return <button onClick={()=>login({name:"user"})}>Login</button>
 }
